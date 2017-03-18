@@ -79,6 +79,7 @@
     <color name="transparentBackgroundBlack">#0D000000</color>
     <color name="transparentBlack_50">#8C000000</color>
     <color name="transparentBlack_75">#CC000000</color>
+    <color name="greenBackground">#39a200</color>
     <color name="darkBlue">#3b5998</color>
     <color name="toolbar_bottom">#88333333</color>
     <color name="backgroundGreen">#39A200</color>

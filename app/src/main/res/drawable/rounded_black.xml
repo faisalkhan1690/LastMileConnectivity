@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <corners android:radius="@dimen/radius100dp" />
+    <gradient
+        android:startColor="@color/requets_cab_call_text_color"
+        android:centerColor="@color/requets_cab_call_text_color"
+        android:endColor="@color/requets_cab_call_text_color"
+        android:angle="270" />
+</shape>

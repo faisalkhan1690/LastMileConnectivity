@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/intro_background"
+    android:descendantFocusability="beforeDescendants">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:focusable="false">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/tv_register"
+            android:padding="@dimen/padding10dp"
+            android:clickable="false"
+            android:focusable="false"
+            android:gravity="center_vertical"
+            android:text="User Login"
+            android:textColor="@color/fontSecondary100"
+            android:textSize="@dimen/font20dp" />
+
+        <TextView
+            android:id="@+id/tv_register"
+            style="@style/CustomTextView"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/padding10dp"
+            android:text="@string/register"
+            android:textColor="@color/fontOrange"
+            android:textSize="@dimen/font17dp" />
+    </RelativeLayout>
+</LinearLayout>
