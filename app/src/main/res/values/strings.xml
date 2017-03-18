@@ -9,5 +9,9 @@
     <string name="proceed">Proceed</string>
     <string name="driver">driver</string>
     <string name="user">user</string>
+    <string name="account_info">Account Info</string>
+    <string name="history">History</string>
+    <string name="wallet_status">Wallet Status</string>
+    <string name="data_statistics">Data Statistics</string>
 </resources>
 
