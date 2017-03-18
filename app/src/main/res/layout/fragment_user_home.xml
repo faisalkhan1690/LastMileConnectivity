@@ -1,29 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:id="@+id/root_view"
+    android:layout_height="match_parent">
 
 
-    <TextView
-        android:id="@+id/label"
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="100dp"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:textSize="45dp"
-        android:text="Connect"
-        android:textStyle="bold"/>
+        android:layout_above="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
-    <TextView
-        android:layout_below="@id/label"
-        android:layout_centerInParent="true"
-        android:layout_width="fill_parent"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="12dp"
-        android:layout_marginTop="10dp"
-        android:gravity="center_horizontal"
-        android:text="Edit fragment_connect.xml to change the appearance"
-        android:id="@+id/textView2" />
+        android:layout_gravity="top"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/margin5dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/et_source"
+            style="@style/CustomEditText"
+            android:background="@drawable/edit_text_white_custom"
+            android:hint="Source"
+            android:layout_marginLeft="@dimen/margin40dp"
+            android:layout_marginRight="@dimen/margin40dp"
+            android:inputType="textVisiblePassword"
+            android:padding="@dimen/padding10dp"
+            android:textColor="@color/fontPrimary80"
+            android:textColorHint="@color/fontPrimary40"
+            android:textSize="@dimen/font14dp" />
+        <EditText
+            android:id="@+id/et_destination"
+            style="@style/CustomEditText"
+            android:background="@drawable/edit_text_white_custom"
+            android:hint="Destination"
+            android:layout_marginLeft="@dimen/margin40dp"
+            android:layout_marginRight="@dimen/margin40dp"
+            android:inputType="textVisiblePassword"
+            android:padding="@dimen/padding10dp"
+            android:textColor="@color/fontPrimary80"
+            android:textColorHint="@color/fontPrimary40"
+            android:textSize="@dimen/font14dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blackBackground90"
+        android:gravity="center"
+        android:padding="@dimen/padding10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:id="@+id/btn_book"
+            style="@style/CustomOrangeButton"
+            android:layout_marginRight="@dimen/margin3dp"
+            android:paddingBottom="@dimen/padding13dp"
+            android:paddingLeft="@dimen/padding40dp"
+            android:paddingRight="@dimen/padding40dp"
+            android:paddingTop="@dimen/padding13dp"
+            android:text="@string/book_a_ride" />
+
+        <Spinner
+            android:id="@+id/payment_option"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin3dp"
+            android:entries="@array/payment_option"/>
+    </LinearLayout>
 
 </RelativeLayout>

@@ -72,6 +72,7 @@
     <color name="yellowBackground">#ffd55b</color>
     <color name="yellowBackground_unavailable">#66ffd24f</color>
     <color name="pinkBackground50">#80e5dfdf</color>
+    <color name="blackBackground90">#CCFFFFFF</color>
     <color name="white">#FFFFFF</color>
     <color name="screenBackground">#FFFFFF</color>
     <color name="transparentBackground100">#00FFFFFF</color>

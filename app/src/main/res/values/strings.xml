@@ -16,13 +16,16 @@
     <string name="sign_out">Sign Out</string>
     <string name="driver_name">Driver Name</string>
     <string name="user_image">user profile</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_maps1">Map</string>
+    <string name="book_a_ride">Book a ride</string>
+    <string name="cancel">Cancel</string>
+    <string name="contact">Contact</string>
+    <string name="work_offline">Work Offline</string>
 
-    <string-array name="navigation_drawer_items_array">
-        <item>Account Info</item>
-        <item>History</item>
-        <item>Wallet Status</item>
-        <item>Data Statistics</item>
-        <item>Sign Out</item>
+    <string-array name="payment_option">
+        <item>Jangid wallet </item>
+        <item>Cash</item>
     </string-array>
 </resources>
 

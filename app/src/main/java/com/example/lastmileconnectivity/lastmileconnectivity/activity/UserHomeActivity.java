@@ -26,7 +26,7 @@ import com.kelltontech.ui.activity.BaseActivity;
 
 import java.util.ArrayList;
 
-public class UserHomeActivity extends BaseActivity {
+public class UserHomeActivity extends BaseActivity implements UserHomeFragment.IUserHomeFragmentCallBack {
 
     private DrawerLayout mDrawerLayout;
     private ListView mDrawerList;
@@ -59,8 +59,13 @@ public class UserHomeActivity extends BaseActivity {
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerLayout.setDrawerListener(mDrawerToggle);
         setupDrawerToggle();
-        selectItem(0);
+        selectItem(1);
 
+    }
+
+    @Override
+    public void sendData(String source, String destination, String paymentOption) {
+        startActivity(new Intent(UserHomeActivity.this,UserRideActivity.class));
     }
 
     private class DrawerItemClickListener implements ListView.OnItemClickListener {
@@ -73,6 +78,9 @@ public class UserHomeActivity extends BaseActivity {
     }
 
     private void selectItem(int position) {
+        if(position==0){
+            return;
+        }
 
         Fragment fragment = null;
 
@@ -80,7 +88,7 @@ public class UserHomeActivity extends BaseActivity {
             case 1:
                 fragment = new UserHomeFragment();
                 break;
-            case 0:
+            case 2:
                 fragment = new UserAccountInfoFragment();
                 break;
             case 3:
@@ -108,7 +116,7 @@ public class UserHomeActivity extends BaseActivity {
 
             mDrawerList.setItemChecked(position, true);
             mDrawerList.setSelection(position);
-            setTitle(drawerItem.get(position).name);
+            setTitle(drawerItem.get(position-1).name);
             mDrawerLayout.closeDrawer(mDrawerList);
 
         } else {
