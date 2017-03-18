@@ -19,9 +19,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        
+
         <activity
             android:name=".activity.LoginActivity"
+            android:theme="@style/AppThemeSplash"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.SignUpActivity"
+            android:theme="@style/AppThemeSplash"
             android:screenOrientation="portrait" />
 
     </application>

@@ -2,5 +2,12 @@
     <string name="app_name">Last Mile Connectivity</string>
     <string name="email_id_phone_number">Email Id / Phone number</string>
     <string name="show">Show</string>
+    <string name="hide">Hide</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="user_login">User Login</string>
+    <string name="internet_check">Please check your internet connection</string>
+    <string name="proceed">Proceed</string>
+    <string name="driver">driver</string>
+    <string name="user">user</string>
 </resources>
 

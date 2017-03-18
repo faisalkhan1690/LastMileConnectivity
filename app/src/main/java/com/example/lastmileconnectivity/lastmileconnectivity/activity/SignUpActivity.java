@@ -1,11 +1,8 @@
 package com.example.lastmileconnectivity.lastmileconnectivity.activity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.widget.Toolbar;
-import android.text.method.PasswordTransformationMethod;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
@@ -17,18 +14,19 @@ import com.kelltontech.ui.activity.BaseActivity;
 import com.kelltontech.utils.ConnectivityUtils;
 import com.kelltontech.utils.StringUtils;
 
-public class LoginActivity extends BaseActivity implements View.OnClickListener {
+public class SignUpActivity extends BaseActivity implements View.OnClickListener {
 
     private View mViewRoot;
     private EditText mEtUserId;
     private EditText mEtUserPassword;
-    private TextView mTvHideShow;
-    private boolean mIsPasswordVisible = false;
+    private View mViewSignUp;
+    private View mViewOption;
+    private boolean isUser=false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_signup);
 
         setUpToolBar();
 
@@ -36,18 +34,20 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         mViewRoot=findViewById(R.id.root_view);
         mEtUserId=(EditText)findViewById(R.id.et_user_id);
         mEtUserPassword=(EditText)findViewById(R.id.et_user_password);
+        mViewSignUp=findViewById(R.id.rl_sign_up);
+        mViewOption=findViewById(R.id.ll_option);
+        View ivDriver = findViewById(R.id.iv_driver);
+        View ivUser = findViewById(R.id.iv_user);
 
-        mTvHideShow=(TextView) findViewById(R.id.tv_hide_show);
-        View viewLogin = findViewById(R.id.btn_login);
+        assert ivDriver != null;
+        ivDriver.setOnClickListener(this);
+        assert ivUser != null;
+        ivUser.setOnClickListener(this);
+
+
         View viewRegister = findViewById(R.id.tv_register);
-
-        //on click listener
-        mTvHideShow.setOnClickListener(this);
-        assert viewLogin != null;
-        viewLogin.setOnClickListener(this);
         assert viewRegister != null;
         viewRegister.setOnClickListener(this);
-
     }
 
 
@@ -59,8 +59,10 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbar);
         assert mToolbar != null;
         TextView tv_title = (TextView) mToolbar.findViewById(R.id.tv_title);
+        TextView tv_register = (TextView) mToolbar.findViewById(R.id.tv_register);
+        tv_register.setVisibility(View.INVISIBLE);
         assert tv_title != null;
-        tv_title.setText(R.string.user_login);
+        tv_title.setText(R.string.sign_up);
         setSupportActionBar(mToolbar);
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
@@ -97,11 +99,11 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
     public void onClick(View view) {
         switch(view.getId()){
 
-            case R.id.btn_login:
+            case R.id.tv_register:
                 String username=mEtUserId.getText().toString();
                 String password=mEtUserPassword.getText().toString();
 
-                if (!ConnectivityUtils.isNetworkEnabled(LoginActivity.this)) {
+                if (!ConnectivityUtils.isNetworkEnabled(SignUpActivity.this)) {
                     CustomUtil.showSnackBar(mViewRoot,getString(R.string.internet_check));
                     return;
                 }
@@ -110,28 +112,20 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                     //TODO web service hit
                 }
                 break;
-
-            case R.id.tv_hide_show:
-
-                if (mIsPasswordVisible) {
-                    mIsPasswordVisible = false;
-
-                    //setting text type password
-                    mEtUserPassword.setTransformationMethod(new PasswordTransformationMethod());
-                    mTvHideShow.setText(getString(R.string.show));
-                } else {
-                    mIsPasswordVisible = true;
-
-                    //setting text type normal
-                    mEtUserPassword.setTransformationMethod(null);
-                    mTvHideShow.setText(getString(R.string.hide));
-                }
-                mEtUserPassword.setSelection(mEtUserPassword.getText().toString().length());
+            case R.id.iv_driver:
+                isUser=false;
+                mViewSignUp.setVisibility(View.VISIBLE);
+                mViewOption.setVisibility(View.GONE);
                 break;
 
-            case R.id.tv_register:
-                startActivity(new Intent(LoginActivity.this,SignUpActivity.class));
+            case R.id.iv_user:
+                isUser=true;
+                isUser=false;
+                mViewSignUp.setVisibility(View.VISIBLE);
+                mViewOption.setVisibility(View.GONE);
                 break;
+
+
         }
     }
 
