@@ -14,6 +14,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
@@ -32,7 +33,7 @@ import com.kelltontech.utils.KeypadUtils;
 /**
  * This class is used as base-class for application-base-activity.
  */
-public abstract class BaseActivity extends ActionBarActivity implements IScreen {
+public abstract class BaseActivity extends AppCompatActivity implements IScreen {
 
     private String LOG_TAG = getClass().getSimpleName();
     public static final String COMING_FROM_NOTIFICATION = "COMING_FROM_NOTIFICATION";

@@ -14,6 +14,10 @@
         <item name="android:windowAnimationStyle">@null</item>
     </style>
 
+    <style name="AppTheme1" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+
     <!--Views styles-->
     <style name="CustomEditText" parent="android:Widget.EditText">
         <item name="android:layout_width">fill_parent</item>

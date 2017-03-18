@@ -140,7 +140,7 @@
 
 
         <Button
-            android:id="@+id/btn_login"
+            android:id="@+id/btn_proceed"
             style="@style/CustomOrangeButton"
             android:layout_below="@+id/rl_user_password"
             android:layout_centerHorizontal="true"

@@ -13,5 +13,16 @@
     <string name="history">History</string>
     <string name="wallet_status">Wallet Status</string>
     <string name="data_statistics">Data Statistics</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="driver_name">Driver Name</string>
+    <string name="user_image">user profile</string>
+
+    <string-array name="navigation_drawer_items_array">
+        <item>Account Info</item>
+        <item>History</item>
+        <item>Wallet Status</item>
+        <item>Data Statistics</item>
+        <item>Sign Out</item>
+    </string-array>
 </resources>
 

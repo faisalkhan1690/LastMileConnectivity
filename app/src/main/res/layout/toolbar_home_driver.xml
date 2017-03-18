@@ -1,0 +1,42 @@
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?android:attr/actionBarSize"
+    android:background="@color/colorPrimary"
+    android:gravity="center"
+    android:clickable="false"
+    android:focusable="false"
+    android:minHeight="?android:attr/actionBarSize"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="false"
+        android:focusable="false">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/tv_register"
+            android:gravity="center_vertical"
+            android:maxLength="15"
+            android:text="@string/driver_name"
+            android:clickable="false"
+            android:focusable="false"
+            android:textColor="@color/fontSecondary100"
+            android:textSize="@dimen/font20dp" />
+
+        <TextView
+            android:id="@+id/tv_sign_out"
+            style="@style/CustomTextView"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/padding10dp"
+            android:text="@string/sign_out"
+            android:textColor="@color/fontSecondary100"
+            android:textSize="@dimen/font17dp" />
+    </RelativeLayout>
+</android.support.v7.widget.Toolbar>

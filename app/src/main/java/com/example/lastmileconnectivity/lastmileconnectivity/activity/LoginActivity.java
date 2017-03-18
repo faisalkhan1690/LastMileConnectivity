@@ -108,6 +108,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
 
                 if(checkValidation(username,password)){
                     //TODO web service hit
+                    startActivity(new Intent(LoginActivity.this,UserHomeActivity.class));
                 }
                 break;
 
