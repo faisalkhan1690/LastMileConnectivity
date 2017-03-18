@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "D:\\hack\\LastMileConnectivity\\androidbaseframerepo1\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\ic_plusone_medium_off_client.png",
+        "source": "D:\\hack\\LastMileConnectivity\\androidbaseframerepo1\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services\\6.5.87\\res\\drawable-tvdpi\\ic_plusone_medium_off_client.png"
+    },
+    {
+        "merged": "D:\\hack\\LastMileConnectivity\\androidbaseframerepo1\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\ic_plusone_tall_off_client.png",
+        "source": "D:\\hack\\LastMileConnectivity\\androidbaseframerepo1\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services\\6.5.87\\res\\drawable-tvdpi\\ic_plusone_tall_off_client.png"
+    },
+    {
+        "merged": "D:\\hack\\LastMileConnectivity\\androidbaseframerepo1\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\ic_plusone_small_off_client.png",
+        "source": "D:\\hack\\LastMileConnectivity\\androidbaseframerepo1\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services\\6.5.87\\res\\drawable-tvdpi\\ic_plusone_small_off_client.png"
+    },
+    {
+        "merged": "D:\\hack\\LastMileConnectivity\\androidbaseframerepo1\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-tvdpi\\ic_plusone_standard_off_client.png",
+        "source": "D:\\hack\\LastMileConnectivity\\androidbaseframerepo1\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services\\6.5.87\\res\\drawable-tvdpi\\ic_plusone_standard_off_client.png"
+    }
+]

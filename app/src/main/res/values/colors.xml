@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Theme colors-->
+    <color name="colorPrimary">#0CB7E6</color>
+    <color name="colorPrimaryDark">#089AC2</color>
+    <color name="colorPrimaryYellow">#ffd55b</color>
+    <color name="colorPrimaryDarkYellow">#f5cb53</color>
+    <color name="colorPrimaryGreen">#308801</color>
+    <color name="colorPrimaryDarkGreen">#308801</color>
+    <color name="colorPrimaryRed">#FA4E4E</color>
+    <color name="colorPrimaryDarkRed">#F24242</color>
+    <color name="colorAccent">#949499</color>
+    <color name="colorPrimaryBlue">#528CD8</color>
+    <color name="colorPrimaryBlueDark">#427CC7</color>
+
+    <!--App colors-->
+    <color name="iconRed">#FB4F4F</color>
+    <color name="iconPurple">#604a7B</color>
+    <color name="iconWhite">#C0C0C0</color>
+    <color name="iconBlue">#0DBAE4</color>
+    <color name="searchListHeader">#F9F9FA</color>
+    <color name="grayWhite">#A6DDF3</color>
+    <color name="grayWhiteLight">#DEF1F8</color>
+
+
+    <!--style guide please do not define any color here define in temp section -->
+    <color name="fontPrimary100">#FF0c1e37</color>
+    <color name="fontPrimary90">#E60c1e37</color>
+    <color name="fontPrimary80">#CC0c1e37</color>
+    <color name="fontPrimary70">#B30c1e37</color>
+    <color name="fontPrimary60">#990c1e37</color>
+    <color name="fontPrimary50">#800c1e37</color>
+    <color name="fontPrimary40">#660c1e37</color>
+    <color name="fontPrimary30">#4D0c1e37</color>
+    <color name="fontPrimary25">#400c1e37</color>
+    <color name="fontPrimary20">#330c1e37</color>
+    <color name="fontPrimary10">#1A0c1e37</color>
+
+    <color name="fontSecondary100">#FFFFFFFF</color>
+    <color name="fontSecondary80">#CCFFFFFF</color>
+    <color name="fontSecondary60">#99FFFFFF</color>
+    <color name="fontSecondary50">#80FFFFFF</color>
+    <color name="fontSecondary40">#66FFFFFF</color>
+    <color name="fontSecondary20">#33FFFFFF</color>
+    <color name="fontSecondary10">#1AFFFFFF</color>
+
+    <color name="fontOrange">#f9a647</color>
+    <color name="fontBlue">#0cb7e6</color>
+    <color name="fontBlue80">#CC0cb7e6</color>
+    <color name="fontGray">#919499</color>
+    <color name="fontGray60">#99919499</color>
+    <color name="fontGrayDark">#7e5911</color>
+    <color name="fontYellow">#ffd55b</color>
+    <color name="fontGreen">#39A200</color>
+    <color name="fontGreenLight">#39A200</color>
+
+    <color name="fontGrayMedium">#aeb8c9</color>
+    <color name="fontGrayLight100">#FF09344d</color>
+    <color name="fontGrayLight60">#9909344d</color>
+    <color name="fontGrayLight50">#8009344d</color>
+    <color name="fontGrayLight30">#4D09344d</color>
+
+    <color name="fontRed100">#FFf13928</color>
+    <color name="fontRed80">#CCf13928</color>
+
+    <color name="borderGray">#cad2d8</color>
+    <color name="borderGrayDark">#e8eaec</color>
+    <color name="borderRed">#f13928</color>
+
+    <color name="orangeBackground">#f8992d</color>
+    <color name="orangeBackground1">#ffc046</color>
+    <color name="yellowBackground">#ffd55b</color>
+    <color name="yellowBackground_unavailable">#66ffd24f</color>
+    <color name="pinkBackground50">#80e5dfdf</color>
+    <color name="white">#FFFFFF</color>
+    <color name="screenBackground">#FFFFFF</color>
+    <color name="transparentBackground100">#00FFFFFF</color>
+    <color name="transparentBackground">#0DFFFFFF</color>
+    <color name="transparentBackgroundBlack">#0D000000</color>
+    <color name="transparentBlack_50">#8C000000</color>
+    <color name="transparentBlack_75">#CC000000</color>
+    <color name="darkBlue">#3b5998</color>
+    <color name="toolbar_bottom">#88333333</color>
+    <color name="backgroundGreen">#39A200</color>
+    <color name="backgroundGrayDark">#B6BDC5</color>
+    <color name="backgroundGray">#80cad2d8</color>
+    <color name="backgroundGraydark">#F2F4F6</color>
+    <color name="backgroundGray30">#33cad2d8</color>
+    <color name="backgroundGrayNew">#dce1e5</color>
+    <color name="backgroundGrayLight">#f6f8fa</color>
+    <color name="backgroundWhite">#FFFFFF</color>
+    <color name="backgroundBlack">#000000</color>
+    <color name="backgroundWhite_50">#80FFFFFF</color>
+    <color name="line_background">#d0dddf</color>
+    <color name="intro_background">#041528</color>
+    <color name="deep_light_red_background">#dc6f5e</color>
+    <color name="light_gray_background">#aeb8c9</color>
+    <color name="account_background">#f2f6fa</color>
+    <color name="refrral_color">#FCFCFC</color>
+    <color name="static_offer_back">#FFFCF1</color>
+
+
+    <!--temp Colors Please avoid to use these colors-->
+    <color name="whiteFont">#FFFFFF</color>
+    <color name="grayFont">#949499</color>
+    <color name="darkGrayFont">#5D6470</color>
+    <color name="grayLightFont">#B9BDC0</color>
+    <color name="blackFont">#000000</color>
+    <color name="grayDeepLightFont">#CBD0D4</color>
+    <color name="lightBlackFont">#5B6771</color>
+    <color name="lightRedFont">#D16059</color>
+    <color name="redFont">#F13928</color>
+    <color name="blueFont">#0CB7E6</color>
+    <color name="grayBorder">#CAD2D8</color>
+    <color name="redBorder">#F13928</color>
+    <color name="offerColorPrimary">#f5cb53</color>
+    <color name="offerColorSecondary">#fbd157</color>
+    <color name="green_background">#afd23e</color>
+
+    <color name="deep_light_gray_background">#F6F8FA</color>
+
+    <color name="light_gray_text_color">#9aa6bb</color>
+
+    <color name="green">#39A200</color>
+    <color name="yellow">#FBCE33</color>
+    <color name="orange">#FB4B33</color>
+
+    <color name="backgroundResortDetail">@color/white</color>
+    <color name="titlesResortDetail">#9C9C9E</color>
+    <color name="yellowBorder">#8D7728</color>
+    <color name="grayBorderTingsToDo">#FBFBFB</color>
+    <color name="backgroundTermsCondition">#F0F0F0</color>
+    <color name="backgroundHistory">#F2F6FA</color>
+    <color name="booking_background">#E7F5DF</color>
+
+    <color name="blueButtonBackground">#31C2E6</color>
+    <color name="background_terms">#F3FBFE</color>
+
+    <drawable name="fontPrimary80">#CC0c1e37</drawable>
+    <drawable name="fontPrimary40">#660c1e37</drawable>
+    <drawable name="backgroundWhite">#FFFFFF</drawable>
+    <drawable name="backgroundWhite_50">#80FFFFFF</drawable>
+    <drawable name="backgroundGray30">#33cad2d8</drawable>
+    <color name="pre_check_in_background">#F7FAEB</color>
+    <color name="booking_background_color">#F6F8FA</color>
+    <color name="no_upcomg_strip_color">#D2E59B</color>
+    <color name="day_utilised_color">#AFD23E</color>
+    <color name="red_payment">#ee6969</color>
+    <color name="ongoing_holidays_color">#39A200</color>
+    <color name="no_upcoming_holidays">#D2E59B</color>
+    <color name="past_holidays_background_iamge_color">#F6F8FA</color>
+    <color name="black_medium_text">#0c1e37</color>
+    <color name="light_black">#6b7685</color>
+    <color name="backgroundRefer">#E6F8FC</color>
+    <color name="background_service_color">#f6f8fa</color>
+    <color name="background_pre_checkin_color">#39A200</color>
+    <color name="background_explorer">#eff3f6</color>
+    <color name="amenties_background">#F7F5E9</color>
+    <color name="requets_cab_call_text_color">#F8992D</color>
+
+    <color name="rounderBorder">#757F8E</color>
+</resources>
