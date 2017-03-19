@@ -114,10 +114,10 @@ public class SignUpActivity extends BaseActivity implements View.OnClickListener
                 }
 
                 if(checkValidation(username,password)){
-                    //TODO web service hit
                     Intent intent = new Intent(SignUpActivity.this, DriverHomeActivity.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
+                    finish();
                 }
                 break;
             case R.id.iv_driver:

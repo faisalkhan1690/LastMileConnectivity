@@ -85,7 +85,7 @@ public class UserHomeFragment extends BaseFragment {
                 rlp.addRule(RelativeLayout.ALIGN_PARENT_TOP, 0);
                 rlp.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM, RelativeLayout.TRUE);
 
-                LatLng sydney = new LatLng(28.5135657, 77.063438);
+                LatLng sydney = new LatLng(28.490982, 77.076140);
                 googleMap.addMarker(new MarkerOptions().position(sydney).title("E Rickshaw").snippet("Available near you "));
 
                 // For zooming automatically to the location of the marker

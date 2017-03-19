@@ -54,6 +54,7 @@ public class UserHomeActivity extends BaseActivity implements UserHomeFragment.I
         drawerItem.add(new DataModel(R.drawable.user, "Wallet Status"));
         drawerItem.add(new DataModel(R.drawable.user, "Data Statistics"));
         drawerItem.add(new DataModel(R.drawable.user, "Sign Out"));
+
         DrawerItemCustomAdapter adapter = new DrawerItemCustomAdapter(this, R.layout.list_view_item_row, drawerItem);
         mDrawerList.setAdapter(adapter);
         mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
@@ -106,6 +107,7 @@ public class UserHomeActivity extends BaseActivity implements UserHomeFragment.I
                 Intent intent = new Intent(UserHomeActivity.this, LoginActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
+                finish();
                 break;
 
             default:

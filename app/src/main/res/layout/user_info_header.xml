@@ -10,13 +10,14 @@
         android:layout_width="180dp"
         android:layout_height="180dp"
         android:contentDescription="@string/user_image"
-        android:src="@mipmap/ic_launcher" />
+        android:src="@drawable/usericon" />
 
     <TextView
         android:id="@+id/user_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="@dimen/padding5dp"
+        android:textSize="@dimen/font16dp"
         android:text="User Name" />
 
 </LinearLayout>

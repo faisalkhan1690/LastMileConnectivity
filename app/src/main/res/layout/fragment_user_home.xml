@@ -8,7 +8,7 @@
     <com.google.android.gms.maps.MapView
         android:id="@+id/mapView"
         android:layout_alignParentTop="true"
-        android:layout_above="@+id/ll_bottom"
+        android:layout_above="@+id/ll_offer"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
@@ -46,6 +46,19 @@
             android:textSize="@dimen/font14dp" />
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/ll_offer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blackBackground90"
+        android:layout_above="@+id/ll_bottom">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textColor="@color/orangeBackground"
+            android:text="@string/offer"/>
+    </LinearLayout>
     <LinearLayout
         android:id="@+id/ll_bottom"
         android:layout_width="match_parent"

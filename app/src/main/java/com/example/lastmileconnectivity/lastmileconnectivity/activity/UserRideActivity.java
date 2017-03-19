@@ -107,7 +107,7 @@ public class UserRideActivity extends BaseActivity {
                 rlp.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM, RelativeLayout.TRUE);
 
                 // For dropping a marker at a point on the Map
-                LatLng sydney = new LatLng(28.5135657, 77.063438);
+                LatLng sydney = new LatLng(28.490982, 77.076140);
                 googleMap.addMarker(new MarkerOptions().position(sydney).title("Ride").snippet("Ride"));
 
                 // For zooming automatically to the location of the marker

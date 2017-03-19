@@ -24,6 +24,7 @@
     <string name="contact">Contact</string>
     <string name="work_offline">Work Offline</string>
     <string name="data_data_DSD_pics">data/data/DSD/pics</string>
+    <string name="offer">Use Jangid wallet and get flat 10% on every booking</string>
 
     <string-array name="payment_option">
         <item>Jangid wallet </item>

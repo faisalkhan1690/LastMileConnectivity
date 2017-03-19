@@ -14,6 +14,6 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:contentDescription="@string/app_name"
-        android:src="@drawable/splash" />
+        android:src="@drawable/picture1" />
 
 </RelativeLayout>

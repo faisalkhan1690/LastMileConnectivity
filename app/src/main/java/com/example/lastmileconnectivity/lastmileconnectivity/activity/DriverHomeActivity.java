@@ -24,6 +24,7 @@ public class DriverHomeActivity extends BaseActivity implements View.OnClickList
     private ImageView mIvHistory;
     private ImageView mIvWalletStatus;
     private ImageView mIvDataStatistics;
+    private View mTvPickUserOffline;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,37 +38,46 @@ public class DriverHomeActivity extends BaseActivity implements View.OnClickList
         mIvHistory=(ImageView)findViewById(R.id.iv_history);
         mIvWalletStatus=(ImageView)findViewById(R.id.iv_wallet_status);
         mIvDataStatistics=(ImageView)findViewById(R.id.iv_data_statistics);
+        mTvPickUserOffline=findViewById(R.id.tv_pick_user_offline);
 
         mTvSignOut.setOnClickListener(this);
         mIvAccountInfo.setOnClickListener(this);
         mIvHistory.setOnClickListener(this);
         mIvWalletStatus.setOnClickListener(this);
         mIvDataStatistics.setOnClickListener(this);
+        mTvPickUserOffline.setOnClickListener(this);
+
+
         setData();
 
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
 
-                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(DriverHomeActivity.this);
-                alertDialogBuilder.setTitle("Booking Request");
-                alertDialogBuilder
-                        .setMessage("One user is requesting for ride. Would you like to accept his request?")
-                        .setCancelable(false)
-                        .setPositiveButton("Yes",new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog,int id) {
-                                startActivity(new Intent(DriverHomeActivity.this,UserRideActivity.class));
+                try{
+                    AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(DriverHomeActivity.this);
+                    alertDialogBuilder.setTitle("Booking Request");
+                    alertDialogBuilder
+                            .setMessage("One user is requesting for ride. Would you like to accept his request?")
+                            .setCancelable(false)
+                            .setPositiveButton("Yes",new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog,int id) {
+                                    startActivity(new Intent(DriverHomeActivity.this,UserRideActivity.class));
 
-                            }
-                        })
-                        .setNegativeButton("No",new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog,int id) {
-                                dialog.cancel();
-                            }
-                        });
+                                }
+                            })
+                            .setNegativeButton("No",new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog,int id) {
+                                    dialog.cancel();
+                                }
+                            });
 
-                AlertDialog alertDialog = alertDialogBuilder.create();
-                alertDialog.show();
+                    AlertDialog alertDialog = alertDialogBuilder.create();
+                    alertDialog.show();
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+
             }
         },5000);
 
@@ -94,6 +104,7 @@ public class DriverHomeActivity extends BaseActivity implements View.OnClickList
                 Intent intent = new Intent(DriverHomeActivity.this, LoginActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
+                finish();
                 break;
 
             case R.id.iv_account_info:
@@ -106,6 +117,10 @@ public class DriverHomeActivity extends BaseActivity implements View.OnClickList
 
             case R.id.iv_wallet_status:
                 Toast.makeText(this, "Man at work", Toast.LENGTH_SHORT).show();
+                break;
+
+            case R.id.tv_pick_user_offline:
+                startActivity(new Intent(DriverHomeActivity.this,DriverOfflineActivity.class));
                 break;
 
             case R.id.iv_data_statistics:
