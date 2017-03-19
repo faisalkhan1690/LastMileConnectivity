@@ -85,12 +85,11 @@ public class UserHomeFragment extends BaseFragment {
                 rlp.addRule(RelativeLayout.ALIGN_PARENT_TOP, 0);
                 rlp.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM, RelativeLayout.TRUE);
 
-                // For dropping a marker at a point on the Map
                 LatLng sydney = new LatLng(28.5135657, 77.063438);
-                googleMap.addMarker(new MarkerOptions().position(sydney).title("Marker Title").snippet("Marker Description"));
+                googleMap.addMarker(new MarkerOptions().position(sydney).title("E Rickshaw").snippet("Available near you "));
 
                 // For zooming automatically to the location of the marker
-                CameraPosition cameraPosition = new CameraPosition.Builder().target(sydney).zoom(12).build();
+                CameraPosition cameraPosition = new CameraPosition.Builder().target(sydney).zoom(13).build();
                 googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
             }
         });

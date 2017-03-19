@@ -16,6 +16,7 @@ import android.widget.ListView;
 
 import com.example.lastmileconnectivity.lastmileconnectivity.R;
 import com.example.lastmileconnectivity.lastmileconnectivity.adpater.DrawerItemCustomAdapter;
+import com.example.lastmileconnectivity.lastmileconnectivity.constant.SharePref;
 import com.example.lastmileconnectivity.lastmileconnectivity.fragment.UserAccountInfoFragment;
 import com.example.lastmileconnectivity.lastmileconnectivity.fragment.UserHistoryFragment;
 import com.example.lastmileconnectivity.lastmileconnectivity.fragment.UserHomeFragment;
@@ -101,6 +102,7 @@ public class UserHomeActivity extends BaseActivity implements UserHomeFragment.I
                 fragment = new WebViewFragment();
                 break;
             case 6:
+                SharePref.setUserLoggedIn(this,false);
                 Intent intent = new Intent(UserHomeActivity.this, LoginActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);

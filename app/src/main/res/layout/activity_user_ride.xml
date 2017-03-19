@@ -13,14 +13,65 @@
         <include layout="@layout/toolbar" />
     </LinearLayout>
 
-    <fragment
-        android:id="@+id/map"
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/layout_top"
         android:layout_above="@+id/ll_bottom"
-        class="com.google.android.gms.maps.SupportMapFragment" />
+        android:layout_below="@+id/layout_top" />
 
+
+    <LinearLayout
+        android:id="@+id/layout_fare"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_bottom"
+        android:gravity="center_horizontal"
+        android:background="@color/blackBackground90"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin5dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Estimated Fare"
+                android:textSize="@dimen/font14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20.0 Rs"
+                android:textSize="@dimen/font18dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin5dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Estimated Distance"
+                android:textSize="@dimen/font14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6 Km"
+                android:textSize="@dimen/font18dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/ll_bottom"
@@ -32,6 +83,7 @@
         android:background="@color/blackBackground90"
         android:gravity="center"
         android:padding="@dimen/padding10dp">
+
 
         <Button
             android:id="@+id/btn_contact"

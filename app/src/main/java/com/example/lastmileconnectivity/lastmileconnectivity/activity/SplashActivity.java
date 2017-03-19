@@ -9,7 +9,10 @@ import android.view.animation.AnimationUtils;
 
 import com.example.lastmileconnectivity.lastmileconnectivity.R;
 import com.example.lastmileconnectivity.lastmileconnectivity.constant.IAppConstant;
+import com.example.lastmileconnectivity.lastmileconnectivity.constant.SharePref;
+import com.example.lastmileconnectivity.lastmileconnectivity.util.CustomUtil;
 import com.kelltontech.ui.activity.BaseActivity;
+import com.kelltontech.utils.ConnectivityUtils;
 
 
 public class SplashActivity extends BaseActivity implements Animation.AnimationListener {
@@ -30,7 +33,21 @@ public class SplashActivity extends BaseActivity implements Animation.AnimationL
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(SplashActivity.this, UserRideActivity.class));
+                if(SharePref.getIsUserLoggedIn(SplashActivity.this)){
+                    if(SharePref.getIsDriver(SplashActivity.this)){
+                        if (ConnectivityUtils.isNetworkEnabled(SplashActivity.this)) {
+                            startActivity(new Intent(SplashActivity.this, DriverHomeActivity.class));
+                        }else{
+                            startActivity(new Intent(SplashActivity.this, DriverOfflineActivity.class));
+                        }
+
+                    }else{
+                        startActivity(new Intent(SplashActivity.this, UserHomeActivity.class));
+                    }
+
+                }else{
+                    startActivity(new Intent(SplashActivity.this, LoginActivity.class));
+                }
                 finish();
 
             }

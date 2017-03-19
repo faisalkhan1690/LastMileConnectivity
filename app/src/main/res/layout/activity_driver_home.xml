@@ -26,19 +26,19 @@
 
             <ImageView
                 android:id="@+id/iv_account_info"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_margin="@dimen/margin15dp"
                 android:contentDescription="@string/account_info"
-                android:src="@drawable/chat_img" />
+                android:src="@drawable/account" />
 
             <ImageView
                 android:id="@+id/iv_history"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_margin="@dimen/margin15dp"
                 android:contentDescription="@string/history"
-                android:src="@drawable/chat_img" />
+                android:src="@drawable/history" />
         </LinearLayout>
 
         <LinearLayout
@@ -48,19 +48,19 @@
 
             <ImageView
                 android:id="@+id/iv_wallet_status"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_margin="@dimen/margin15dp"
                 android:contentDescription="@string/wallet_status"
-                android:src="@drawable/chat_img" />
+                android:src="@drawable/wallet" />
 
             <ImageView
                 android:id="@+id/iv_data_statistics"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_margin="@dimen/margin15dp"
                 android:contentDescription="@string/data_statistics"
-                android:src="@drawable/chat_img" />
+                android:src="@drawable/graph" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

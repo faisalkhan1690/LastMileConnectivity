@@ -1,13 +1,19 @@
 package com.example.lastmileconnectivity.lastmileconnectivity.activity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
+import android.support.v7.app.AlertDialog;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.lastmileconnectivity.lastmileconnectivity.R;
+import com.example.lastmileconnectivity.lastmileconnectivity.constant.SharePref;
 import com.kelltontech.ui.activity.BaseActivity;
 
 public class DriverHomeActivity extends BaseActivity implements View.OnClickListener {
@@ -39,6 +45,34 @@ public class DriverHomeActivity extends BaseActivity implements View.OnClickList
         mIvDataStatistics.setOnClickListener(this);
         setData();
 
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+
+                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(DriverHomeActivity.this);
+                alertDialogBuilder.setTitle("Booking Request");
+                alertDialogBuilder
+                        .setMessage("One user is requesting for ride. Would you like to accept his request?")
+                        .setCancelable(false)
+                        .setPositiveButton("Yes",new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog,int id) {
+                                startActivity(new Intent(DriverHomeActivity.this,UserRideActivity.class));
+
+                            }
+                        })
+                        .setNegativeButton("No",new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog,int id) {
+                                dialog.cancel();
+                            }
+                        });
+
+                AlertDialog alertDialog = alertDialogBuilder.create();
+                alertDialog.show();
+            }
+        },5000);
+
+
+
     }
 
     @Override
@@ -56,27 +90,27 @@ public class DriverHomeActivity extends BaseActivity implements View.OnClickList
     public void onClick(View v) {
         switch(v.getId()){
             case R.id.tv_sign_out:
+                SharePref.setUserLoggedIn(this,false);
                 Intent intent = new Intent(DriverHomeActivity.this, LoginActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
-
-                //TODO web hit
                 break;
 
             case R.id.iv_account_info:
-                //TODO web hit
+                Toast.makeText(this, "Man at work", Toast.LENGTH_SHORT).show();
                 break;
 
             case R.id.iv_history:
-                //TODO web hit
+                Toast.makeText(this, "Man at work", Toast.LENGTH_SHORT).show();
                 break;
 
             case R.id.iv_wallet_status:
-                //TODO web hit
+                Toast.makeText(this, "Man at work", Toast.LENGTH_SHORT).show();
                 break;
 
             case R.id.iv_data_statistics:
-                //TODO web hit
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://prettilypetite.com/Nagarro/pages/bar_view.php"));
+                startActivity(browserIntent);
                 break;
 
         }

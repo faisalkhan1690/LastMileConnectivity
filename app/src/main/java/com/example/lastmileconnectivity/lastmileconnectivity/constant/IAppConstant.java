@@ -4,6 +4,7 @@ public interface IAppConstant {
 
     //int constant
     int SPLASH_TIME_OUT=3000;
+    String  ERROR="Error";
 
 
     //service events
